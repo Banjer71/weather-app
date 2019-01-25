@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <main>
+        
+        <div class="container">
+            <ul class="settings">
+                <li class="temp"></li>
+                <li class="status"></li>
+                <li class="icon"><img class="ico"></li>
+                <li class="city">
+                    <fieldset>
+                    <form action="/" method="post">
+                      <input name="city" type="text" id="town" class="ghost-input" placeholder="Enter a City" required>
+                      <button type="submit" class="ghost-button" id="mytext" value=" ">Get Weather</button>
+                    </form>
+                  </fieldset>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+                
+            <ul class="social-media">
+                <li class="tw"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="inst"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="github"><a href="#"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
+
+    </main>
+
+
+    <script src="weather.js"></script>"
+</body>
+
+</html>

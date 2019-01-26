@@ -71,6 +71,9 @@ window.addEventListener('load', () => {
             case '09d':
             icons.setAttribute('src', 'img/ico_img/iconfinder_Cloud_lightening_storm_thunder_weather_1_3763535.svg');
             break;
+            case '09n':
+            icons.setAttribute('src', 'img/ico_img/iconfinder_Cloud_lightening_storm_thunder_weather_1_3763535.svg');
+            break;
             case '10n':
             icons.setAttribute('src', 'img/ico_img/iconfinder_0ABolt_cloud_forecast_lightning_moon_night_storm_weather_1_3763546.svg');
             break;

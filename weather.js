@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
         let input = document.querySelector('#town')
         let city = input.value;
         const apiKey = '581cf680a71e49ade585e4a95a704343';
-        let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     
         console.log(city);
 
@@ -36,10 +36,10 @@ window.addEventListener('load', () => {
         let icons = document.querySelector('.ico');
         switch (icona) {
             case '01d':
-            icons.setAttribute('src', '/img/ico_img/iconfinder_forecast_sun_weather_3763531.svg');
+            icons.setAttribute('src', 'img/ico_img/iconfinder_forecast_sun_weather_3763531.svg');
             break;
             case '01n':
-            icons.setAttribute('src', '/img/ico_img/iconfinder_forecast_sun_weather_3763531.svg');
+            icons.setAttribute('src', 'img/ico_img/iconfinder_moon_3763541.svg');
             break;
             case '02d':
             icons.setAttribute('src', 'img/ico_img/iconfinder_Cloud_cloudy_forecast_sun_weather_3763533.svg');
@@ -48,7 +48,7 @@ window.addEventListener('load', () => {
             icons.setAttribute('src', 'img/ico_img/iconfinder_Cloud_forecast_moon_night_weather_3763543.svg');
             break;
             case '03d':
-            icons.setAttribute('src', '/img/ico_img/iconfinder_Cloud_cloudy_forecast_weather_3763532.svg');
+            icons.setAttribute('src', 'img/ico_img/iconfinder_Cloud_cloudy_forecast_weather_3763532.svg');
             break;
             case '03n':
             icons.setAttribute('src', 'img/ico_img/iconfinder_Cloud_lightening_storm_thunder_weather_3763534.svg');
@@ -69,16 +69,11 @@ window.addEventListener('load', () => {
             icons.setAttribute('src', 'img/ico_img/iconfinder_Cloud_day_forecast_rain_shine_sun_weather_3763538.svg');
             break;
             case '09d':
-            icons.setAttribute('src', '/img/ico_img/iconfinder_Cloud_lightening_storm_thunder_weather_1_3763535.svg');
+            icons.setAttribute('src', 'img/ico_img/iconfinder_Cloud_lightening_storm_thunder_weather_1_3763535.svg');
             break;
             case '10n':
             icons.setAttribute('src', 'img/ico_img/iconfinder_0ABolt_cloud_forecast_lightning_moon_night_storm_weather_1_3763546.svg');
             break;
         } 
-        // if(icona == "01d" ) {
     }      
-        //     icons.setAttribute('src', 'img/iconfinder_Cloud_lightening_storm_thunder_weather_1_3763535.svg');
-        // } 
-    
-
 });

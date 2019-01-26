@@ -3,18 +3,37 @@
 let button = document.querySelector('#mytext');
 let temperature = document.querySelector('.temp'); 
 let status = document.querySelector('.status');
-// let icon = document.querySelector('.icon');
+
 
 window.addEventListener('load', () => {
+
+    let lon;
+    let lat;
+    const apiKey = '581cf680a71e49ade585e4a95a704343';
+    // const api2 = 'df30c389ad0b3f460186476bb1bf2fdb';
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=`;
+    //let api = 'https://api.darksky.net/forecast/df30c389ad0b3f460186476bb1bf2fdb/';
+   
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(data => {
+         lon = data.coords.longitude;
+         lat = data.coords.latitude;
+         
+         let currentPosition = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${apiKey}`;
+            console.log(currentPosition);
+            
+        })
+    }
 
     button.addEventListener('click', event => {
         event.preventDefault();
         let input = document.querySelector('#town')
         let city = input.value;
-        const apiKey = '581cf680a71e49ade585e4a95a704343';
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+        
+        url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     
         console.log(city);
+        
 
         fetch(url)
         .then(data =>{
@@ -32,6 +51,7 @@ window.addEventListener('load', () => {
     });
     
     function getIcon(icona) {
+        
         console.log(icona);
         let icons = document.querySelector('.ico');
         switch (icona) {

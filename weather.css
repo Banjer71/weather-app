@@ -33,16 +33,22 @@ main {
     align-items: center;
 }
 
+.location {
+    font-size: 1.5em;
+    color: #fff;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
 .temp {
     font-size:2em;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
     font-family: 'Black Han Sans', sans-serif;
     color: #fff;
 }
 
 .status {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    /* margin-bottom: 0.5em; */
     font-family: 'Black Han Sans', sans-serif;
     color: #fff;
 }

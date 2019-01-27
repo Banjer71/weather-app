@@ -1,5 +1,5 @@
 
-
+let cityName = document.querySelector('.location');
 let button = document.querySelector('#mytext');
 let temperature = document.querySelector('.temp'); 
 let status = document.querySelector('.status');
@@ -15,12 +15,15 @@ window.addEventListener('load', () => {
     //let api = 'https://api.darksky.net/forecast/df30c389ad0b3f460186476bb1bf2fdb/';
    
     if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(data => {
-         lon = data.coords.longitude;
-         lat = data.coords.latitude;
+        navigator.geolocation.getCurrentPosition(position => {
+         lon = position.coords.longitude;
+         lat = position.coords.latitude;
          
-         let currentPosition = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${apiKey}`;
-            console.log(currentPosition);
+         let currentPosition = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&APPID=${apiKey}`;
+        //  cityName.textContent = currentPosition.name;
+            console.log(cityName);
+            myInfo(currentPosition);
+           
             
         })
     }
@@ -34,21 +37,28 @@ window.addEventListener('load', () => {
     
         console.log(city);
         
+        myInfo(url);
+        
+    });
 
-        fetch(url)
+    function myInfo(url){
+
+        return fetch(url)
         .then(data =>{
             return data.json();
         })
         .then(data => {
+            const town = data.name;
             const time = data.weather[0];
             const temp = data.main.temp;
             console.log(data);
             status.textContent = time.main;
             temperature.textContent = temp;
+            cityName.textContent = town;
             getIcon(time.icon);
             
         })
-    });
+    }
     
     function getIcon(icona) {
         

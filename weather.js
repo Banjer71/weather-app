@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
         .then(data => {
             const town = data.name;
             const time = data.weather[0];
-            const temp = data.main.temp;
+            const temp = Math.round(data.main.temp);
             console.log(data);
             status.textContent = time.main;
             temperature.textContent = temp;

@@ -9,10 +9,10 @@ window.addEventListener('load', () => {
 
     let lon;
     let lat;
-    const apiKey = '581cf680a71e49ade585e4a95a704343';
-    // const api2 = 'df30c389ad0b3f460186476bb1bf2fdb';
+    const apiKey = '';
+   
     let url = `https://api.openweathermap.org/data/2.5/weather?q=`;
-    //let api = 'https://api.darksky.net/forecast/df30c389ad0b3f460186476bb1bf2fdb/';
+    
    
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(position => {

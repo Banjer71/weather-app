@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
 
     let lon;
     let lat;
-    const apiKey = '581cf680a71e49ade585e4a95a704343';
+    const apiKey = '';
    
     let url = `https://api.openweathermap.org/data/2.5/weather?q=`;
     
